@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+/* eMailing Script */
+/* dark / light mode */
+/* Projects descriptions */
+/* Project Gif */
+/* Project Logic / Blog */
+/* SocMedia links */
 
 :root {
   --color-bg: #e5e5e5;
@@ -17,14 +23,14 @@
   --font-lineHeight: 1.2rem;
 
   --box-border-lighter: 1px solid #ffffff;
-  --box-border-light: 1px solid #767676;
+  --box-border-light: 1px solid #6d7d8c;
   --box-border-dark: 1px solid #4a5363;
   --box-border-darker: 1px solid rgb(29, 29, 29);
   --box-border-radius: 6px;
   --box-shadow: 0px 6px 8px -6px black;
 
   --shadow-card: ;
-  --width-max: 1200px;
+  --width-max: 1000px;
   --height-navbar: 60px;
   --height-profile: 260px;
   --height-footer: 60px;
@@ -32,7 +38,6 @@
 
 * {
   box-sizing: border-box;
-
   margin: 0;
   padding: 0;
   border: 0;
@@ -44,7 +49,6 @@ body {
   height: 100vh;
   font-family: var(--font-p);
   background-color: var(--color-bg);
-  overflow: hidden;
 }
 a {
   text-decoration: none;
@@ -111,8 +115,8 @@ section {
 #bodyContainer {
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
+  /* overflow-y: scroll;
+  scroll-behavior: smooth; */
 }
 
 /* NAV BAR */
@@ -226,9 +230,13 @@ nav {
   margin: 60px auto;
   max-width: 1100px;
   position: relative;
-  padding: 30px;
-  border: var(--box-border-dark);
+  padding: 56px;
+  border: var(--box-border-light);
   border-radius: var(--box-border-radius);
+}
+
+#info p {
+  text-indent: 20px;
 }
 
 #toolsWrap {
@@ -236,7 +244,7 @@ nav {
   left: 0;
   right: 0;
   margin: auto;
-  width: 90%;
+  width: 100%;
   height: 20%;
   bottom: 0;
 }
@@ -460,4 +468,7 @@ textarea {
 
 footer {
   height: var(--height-footer);
+  text-align: center;
+  font-family: var(--font-m);
+  color: var(--color-font-h);
 }
