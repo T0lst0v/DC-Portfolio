@@ -1,0 +1,463 @@
+@import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --color-bg: #e5e5e5;
+  --color-main: #4a5363;
+  /* --color-main: #677180; */
+  --color-accent: cadetblue;
+  --color-accent-l: rgb(119, 192, 194);
+  --color-font-p: black;
+  --color-font-h: #384252;
+  --color-font-p-reverse: #ffffff;
+  --color-font-h-reverse: #ffffff;
+
+  --font-p: "Nunito Sans", sans-serif;
+  --font-h: "Open Sans", sans-serif;
+  --font-m: "Dongle", sans-serif;
+  --font-lineHeight: 1.2rem;
+
+  --box-border-lighter: 1px solid #ffffff;
+  --box-border-light: 1px solid #767676;
+  --box-border-dark: 1px solid #4a5363;
+  --box-border-darker: 1px solid rgb(29, 29, 29);
+  --box-border-radius: 6px;
+  --box-shadow: 0px 6px 8px -6px black;
+
+  --shadow-card: ;
+  --width-max: 1200px;
+  --height-navbar: 60px;
+  --height-profile: 260px;
+  --height-footer: 60px;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: var(--font-p);
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+a:hover {
+  color: var(--color-accent);
+  transform: scale(1.1);
+}
+
+h1 {
+  font-family: var(--font-h);
+  /* line-height: 5rem; */
+  font-size: 3.4em;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+}
+
+h2 {
+  font-family: var(--font-h);
+  /* line-height: 3rem; */
+  font-size: 2.05rem;
+  font-weight: 500;
+  letter-spacing: 0.08rem;
+}
+h3 {
+  font-family: var(--font-h);
+  line-height: 2rem;
+  font-size: 1rem;
+  font-weight: lighter;
+  letter-spacing: 0.08rem;
+}
+
+h4,
+h5 {
+  font-family: var(--font-m);
+  font-size: 44px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0.06rem;
+}
+h5 {
+  font-weight: 400;
+}
+h6 {
+  font-family: var(--font-m);
+  font-size: 24px;
+  line-height: 2px;
+  font-weight: 400;
+}
+
+.container {
+  position: relative;
+  max-width: var(--width-max);
+  margin: auto;
+  height: 100%;
+}
+
+section {
+  scroll-snap-align: center;
+}
+
+#bodyContainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* NAV BAR */
+
+header {
+  width: 100%;
+  height: var(--height-navbar);
+  position: fixed;
+  background-color: var(--color-bg);
+  z-index: 3;
+}
+
+nav {
+  max-width: var(--width-max);
+  height: 100%;
+  /* border: 1px solid red; */
+  margin: auto;
+}
+
+#navMenu {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  justify-content: right;
+  padding-right: 100px;
+  font-family: var(--font-m);
+  font-size: 28px;
+  color: var(--color-font-h);
+  font-weight: lighter;
+}
+
+#navMenu li {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 20px;
+  transition: 0.2s;
+}
+
+/* #navMenu li:hover {
+  background-color: var(--color-main);
+  color: var(--color-font-p-reverse);
+  color: var(--color-accent-l);
+  transform: scale(1.1);
+  cursor: pointer;
+} */
+
+/* PROFILE */
+#landing {
+  position: relative;
+  padding-top: var(--height-navbar);
+  height: 100vh;
+}
+
+#profileWrap {
+  position: relative;
+  height: var(--height-profile);
+  background-color: var(--color-main);
+  z-index: 3;
+}
+
+#profilePic {
+  position: absolute;
+  width: 300px;
+  left: 140px;
+  top: -20px;
+  z-index: 4;
+  border: var(--box-border-lighter);
+  border-radius: var(--box-border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+#mainContainer {
+}
+
+#profileText {
+  position: absolute;
+  margin-top: 12px;
+  left: 500px;
+  color: white;
+  list-style: none;
+}
+
+#profileSocMed {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+
+#profileSocMed .fa-brands {
+  font-size: 1.4rem;
+  transition: all 0.2s ease-in-out;
+}
+
+#profileSocMed .fa-brands:hover {
+  color: var(--color-accent-l);
+}
+#profileSocMed .fa-brands:active {
+  color: var(--color-accent-l);
+}
+
+/* INFO */
+#infoWrap {
+  height: calc(100% - var(--height-navbar) - var(--height-profile));
+}
+
+#info {
+  margin: 60px auto;
+  max-width: 1100px;
+  position: relative;
+  padding: 30px;
+  border: var(--box-border-dark);
+  border-radius: var(--box-border-radius);
+}
+
+#toolsWrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  height: 20%;
+  bottom: 0;
+}
+
+#toolsWrap h2 {
+  text-align: center;
+  font-family: var(--font-m);
+  line-height: 42px;
+  font-size: 42px;
+}
+
+#tools {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.tool {
+  text-align: center;
+  font-size: 5vh;
+  line-height: 5vh;
+  height: 5vh;
+  color: var(--color-main);
+}
+
+/* PROJECTS */
+#projectsWrap {
+  /* min-height: calc(100vh - var(--height-navbar)); */
+  /* margin-top: var(--height-navbar); */
+  padding-top: var(--height-navbar);
+  position: relative;
+  background-color: var(--color-main);
+  color: var(--color-font-p-reverse);
+  padding-bottom: 40px;
+}
+
+#projectsWrap h4 {
+  line-height: 3rem;
+  font-size: 3rem;
+  padding-top: 40px;
+  text-align: center;
+}
+.project {
+  margin: 40px auto;
+  max-width: 1100px;
+  max-height: 400px;
+  position: relative;
+  padding: 40px;
+  border: var(--box-border-light);
+  border-radius: var(--box-border-radius);
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+
+.project img {
+  box-shadow: var(--box-shadow);
+  border: var(--box-border-darker);
+  border-radius: var(--box-border-radius);
+}
+
+.projectPic-m {
+  height: 240px;
+
+  object-fit: cover;
+  box-shadow: var(--box-shadow);
+  border: var(--box-border-dark);
+}
+
+.projectPic {
+  height: 280px;
+}
+
+.projectInfoWrap {
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.projectInfoWrap h6 {
+  margin: 20px 0;
+  text-decoration: underline;
+}
+
+.projectInfoWrap label {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.projectInfoWrap figure {
+  display: flex;
+  gap: 10px;
+  font-size: 32px;
+  font-weight: 200;
+}
+.projectInfoWrap span {
+  font-size: 22px;
+  line-height: 100%;
+  align-self: center;
+}
+
+.projectInfoWrap .ex {
+  font-size: 32px;
+  align-self: inherit;
+  line-height: 30px;
+  font-weight: 200;
+}
+
+/* CONTACT */
+#contactWrap {
+  background-color: var(--color-bg);
+  height: calc(100vh - var(--height-navbar) - var(--height-footer));
+}
+
+#contactWrap .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+#contactForm {
+  position: relative;
+  background-color: var(--color-main);
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  padding: 100px;
+  border-radius: var(--box-border-radius);
+  box-shadow: var(--box-shadow);
+  border-top: var(--box-border-lighter);
+  border-bottom: var(--box-border-light);
+}
+
+#contactForm h4 {
+  color: var(--color-font-h-reverse);
+  position: absolute;
+  align-self: center;
+
+  top: 20px;
+  /* bottom: 0; */
+  /* top: 80px; */
+
+  line-height: 3rem;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 2;
+}
+
+#contactForm label {
+  /* visibility: hidden; */
+  color: var(--color-font-h-reverse);
+  /* font-family: var(--font-m); */
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 14px;
+  padding: 6px 8px 3px;
+}
+
+#contactForm input {
+  height: 30px;
+}
+
+#contactForm input,
+textarea {
+  padding: 8px;
+  background-color: var(--color-bg);
+  border-radius: var(--box-border-radius);
+  border: var(--box-border-light);
+  background-color: var();
+}
+
+#contactForm textarea {
+  resize: vertical;
+}
+
+#sendForm {
+  margin-top: 20px;
+  background-color: var(--color-accent);
+  border: solid 1px var(--color-accent-l);
+  border-radius: var(--box-border-radius);
+  color: var(--color-font-h-reverse);
+  font-size: 16px;
+  width: 120px;
+  height: 30px;
+  align-self: flex-end;
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  transition: 0.3s;
+}
+
+#sendForm:hover {
+  background-color: var(--color-accent-l);
+  box-shadow: none;
+  transform: scale(0.98);
+}
+
+#contactSocMed {
+  display: flex;
+  gap: 44px;
+  margin-top: 40px;
+  font-size: 56px;
+  color: var(--color-main);
+}
+
+#contactSocMed i {
+  text-shadow: -1px 0 rgb(0, 229, 255), 0 1px rgb(255, 255, 255), 1px 0 rgb(255, 255, 255), 0 -1px rgb(255, 255, 255);
+  transition: 0.3s;
+  /* text-shadow: 0px 2px 2px #656565; */
+}
+
+#contactSocMed i:hover {
+  color: var(--color-accent);
+  transform: scale(1.1);
+}
+
+footer {
+  height: var(--height-footer);
+}
