@@ -3,6 +3,7 @@
 /* Projects descriptions */
 /* Project Gif */
 /* Project Logic / Blog */
+/* write to local storage previous Color mode */
 
 :root {
   --color-bg: #e5e5e5;
@@ -118,7 +119,7 @@ h5 {
 h6 {
   font-family: var(--font-m);
   font-size: 24px;
-  line-height: 2px;
+  line-height: 20px;
   font-weight: 400;
 }
 
@@ -330,6 +331,7 @@ nav {
   padding-top: 40px;
   text-align: center;
 }
+
 .project {
   margin: 40px auto;
   max-width: 1100px;
@@ -344,10 +346,8 @@ nav {
   align-items: center;
 }
 
-.project img {
-  box-shadow: var(--box-shadow);
-  border: var(--box-border-darker);
-  border-radius: var(--box-border-radius);
+.projectInfoWrap {
+  position: relative;
 }
 
 .projectPic-m {
@@ -359,7 +359,13 @@ nav {
 }
 
 .projectPic {
+  display: block;
   height: 280px;
+  background-color: #0d0f12;
+  width: 436px;
+  box-shadow: var(--box-shadow);
+  border: var(--box-border-darker);
+  border-radius: var(--box-border-radius);
 }
 
 .projectInfoWrap {
@@ -369,9 +375,26 @@ nav {
   gap: 8px;
 }
 
-.projectInfoWrap h6 {
+#projectDinner {
+  display: block;
+  height: 280px;
+  width: 436px;
+  background-image: url("./img/projects/whatsForDinner.png");
+}
+#projectDinner:hover {
+  background-image: url("./img/projects/whatsForDinner.gif");
+  transform: scale(1.2);
+}
+
+.projectInfoWrap a {
+  display: inline-block;
   margin: 20px 0;
   text-decoration: underline;
+}
+
+.projectInfoWrap a:hover {
+  color: var(--color-accent-l);
+  transform: scale(1.2);
 }
 
 .projectInfoWrap label {
