@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Open+Sans:wght@300;400;500;600;700&display=swap");
 /* eMailing Script */
-/* dark / light mode */
 /* Projects descriptions */
 /* Project Gif */
 /* Project Logic / Blog */
@@ -9,24 +8,27 @@
   --color-bg: #e5e5e5;
   --color-main: #4a5363;
   /* --color-main: #677180; */
-  --color-accent: cadetblue;
+  --color-accent: rgb(95, 158, 160);
   --color-accent-l: rgb(119, 192, 194);
   --color-font-p: black;
   --color-font-h: #384252;
   --color-font-p-reverse: #ffffff;
-  --color-font-h-reverse: #ffffff;
+  --color-font-h-reverse: #f4f4f4;
 
   --font-p: "Nunito Sans", sans-serif;
   --font-h: "Open Sans", sans-serif;
   --font-m: "Dongle", sans-serif;
   --font-weight-h: 400;
 
+  --box-border-profile-top: 1px solid #f9f9f9;
+  --box-border-profile: 1px solid #f9f9f9;
+
   --box-border-lighter: 1px solid #ffffff;
   --box-border-light: 1px solid #6d7d8c;
   --box-border-dark: 1px solid #4a5363;
   --box-border-darker: 1px solid rgb(29, 29, 29);
   --box-border-radius: 6px;
-  --box-shadow: 0px 6px 8px -6px black;
+  --box-shadow: 0px 7px 8px -6px black;
 
   --shadow-card: ;
   --width-max: 1000px;
@@ -37,17 +39,20 @@
 
 /* DARK MODE */
 .dark {
-  --color-bg: #454957;
-  --color-main: #242931;
-  --color-font-p: #f7f4f4;
-  --color-font-h: #eaf1fc;
+  --color-bg: #0d0f12;
+  --color-main: #1d2028;
+  --color-font-p: #dfdfdf;
+  --color-font-p-reverse: #e4e4e4;
+  --color-font-h: #ced2da;
+  --color-font-h-reverse: #dfdfdf;
   --font-weight-h: 300;
-  --color-font-p-reverse: #e1e1e1;
-  --color-font-h-reverse: #e1e1e1;
 
-  --box-border-lighter: 1px solid #717272;
-  --box-border-light: 1px solid #707071;
-  --box-border-dark: 1px solid #4a5363;
+  --box-border-profile-top: 1px solid #3a3a3a;
+  --box-border-profile: 1px solid #212121;
+
+  --box-border-lighter: 1px solid #525252;
+  --box-border-light: 1px solid #3e3e3e;
+  --box-border-dark: 1px solid #3e3e3e;
   --box-border-darker: 1px solid rgb(29, 29, 29);
 }
 
@@ -175,10 +180,17 @@ nav {
   transition: 0.2s;
 }
 
-#navMenu .fa-solid {
+#colorMode {
   position: absolute;
   right: 0;
-  font-size: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  filter: invert(56%) sepia(34%) saturate(393%) hue-rotate(133deg) brightness(95%) contrast(92%);
+}
+
+#colorMode:hover {
+  transform: scale(1.2);
   color: var(--color-accent-l);
 }
 
@@ -216,7 +228,8 @@ nav {
   left: 100px;
   top: -2.1vh;
   z-index: 4;
-  border: var(--box-border-lighter);
+  border: var(--box-border-profile);
+  border-top: var(--box-border-profile-top);
   border-radius: var(--box-border-radius);
   box-shadow: var(--box-shadow);
 }
@@ -228,7 +241,7 @@ nav {
   position: relative;
   margin-top: 0.5vh;
   left: 160px;
-  color: white;
+  color: var(--color-font-h-reverse);
   list-style: none;
 }
 
@@ -241,13 +254,10 @@ nav {
 
 #profileSocMed .fa-brands {
   font-size: 2vh;
-  transition: all 0.2s ease-in-out;
+  /* transition: all 0.2s ease-in-out; */
 }
 
 #profileSocMed .fa-brands:hover {
-  color: var(--color-accent-l);
-}
-#profileSocMed .fa-brands:active {
   color: var(--color-accent-l);
 }
 
@@ -266,6 +276,7 @@ nav {
 
 #info p {
   text-indent: 20px;
+  font-size: 18px;
 
   /* font-size: 1.6vh; */
 }
@@ -430,7 +441,7 @@ nav {
 }
 
 #contactForm label {
-  /* visibility: hidden; */
+  visibility: hidden;
   color: var(--color-font-h-reverse);
   /* font-family: var(--font-m); */
   font-weight: 100;
@@ -457,6 +468,10 @@ textarea {
   resize: vertical;
   color: var(--color-font-p);
 }
+
+/* #nameInput:not(:placeholder-shown) #labelName {
+  visibility: hidden;
+} */
 
 #sendForm {
   margin-top: 20px;
@@ -488,7 +503,7 @@ textarea {
 }
 
 #contactSocMed i {
-  /* text-shadow: -1px 0 rgb(0, 229, 255), 0 0px rgb(255, 255, 255), 0px 0 rgb(255, 255, 255), 0 -0px rgb(255, 255, 255); */
+  text-shadow: -0px 0 rgb(77, 77, 77), 0 0px rgb(77, 77, 77), 0px 0 rgb(77, 77, 77), 0 -01px rgb(96, 96, 96);
   transition: 0.3s;
   /* text-shadow: 0px 2px 2px #656565; */
 }
@@ -505,5 +520,6 @@ footer {
   font-size: 22px;
   line-height: 22px;
   font-weight: 200px;
-  color: var(--color-font-h);
+  color: rgb(116, 116, 116);
+  background-color: var(--color-bg);
 }

@@ -11,7 +11,7 @@
     <!-- <link rel="stylesheet" href="font-mfizz/font-mfizz.css"> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="scripts.js" defer></script>
     <link rel="stylesheet" href="style.css">
 
     <title>Tolstov</title>
@@ -27,7 +27,9 @@
             <li><a href="#mainContainer">About</a></li>
             <li><a href="#projectsWrap">Projects</a></li>
             <li><a href="#contactWrap">Contact</a></li>
-            <i class="fa-solid fa-moon"></i>
+            <img id="colorMode" src="./img/svg/moon.svg" alt="Dark/Light Mode switch">
+            <!-- <i id="colorMode" class="fa-regular fa-moon"></i> -->
+            <!-- <i class="fa-solid fa-brightness"></i> -->
           </ul>
 
 
@@ -75,7 +77,7 @@
               <section id="info">
                 <strong> Hi, there! </strong><br><br>
 
-                <p>
+                <p></i>
                   I am full stack web developer with background in graphic design, photography and remodeling. <br>
                   I guess I am project-driven Creative, but what does this overuse word mean in my case? - I like to build and solve problems, I actually do!
                   And it looks like it doesn't matter what to build, Lego Millennium Falcon, House Addition, furniture, Web Movie Library or Food Cooking App.
@@ -269,13 +271,13 @@
 
             <form action="javascript:void(0);" id="contactForm">
               <h4>get in touch_</h4>
-              <label for="nameInput">name:</label>
+              <label for="nameInput" id="labelName">name:</label>
               <input type="text" id="nameInput" placeholder="Your name" required>
 
-              <label for="emailInput">email</label>
+              <label for="emailInput" id="labelEmail">email</label>
               <input type="email" id="emailInput" placeholder="Your email" required>
 
-              <label for="messageInput">message</label>
+              <label for="messageInput" id="labelMessage">message</label>
               <textarea type="text" id="messageInput" rows="8" placeholder="How can I help you?" required></textarea>
 
               <button id="sendForm">send</button>
