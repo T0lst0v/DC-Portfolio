@@ -45,14 +45,16 @@
             <div id="profile" class="container">
 
 
-              <img id="profilePic" src="./img/light.jpg" alt="Tolstov Serghei profile picture">
+              <img title="you can Call me Serge" id="profilePic" src="./img/light.jpg" alt="Tolstov Serghei profile picture">
 
               <div id="profileText">
 
                 <h1>Tolstov Serghei</h1>
                 <h2>full stack web developer</h2>
                 <h3>Atlanta, GA</h3>
-                <h3>sergheiTolstov@gmail.com</h3>
+                <a href="mailto:sergheiTolstov@gmail.com">
+                  <h3>sergheiTolstov@gmail.com</h3>
+                </a>
 
                 <figure id="profileSocMed">
                   <a href="https://github.com/T0lst0v" target="_blank">
@@ -139,21 +141,31 @@
             <!-- PROJECT -->
             <article class="project">
 
-              <img class="projectPic-m" src="./img/projects/whatsForDinner-m.png" alt="project - Whats for Dinner -mobile">
 
-              <div>
-                <a id="projectDinner" class="projectPic" href="https://jasonpaff.github.io/WhatsForDinner" target="_blank"> </a>
-              </div>
+              <a href="https://jasonpaff.github.io/WhatsForDinner" target="_blank">
+                <div class=" projectPicWrap">
+                  <img class="projectPic-m static" src="./img/projects/whatsForDinner-m.png" alt="project - Whats for Dinner -mobile">
+                  <img class="projectPic-m animated" src="./img/projects/whatsForDinner-m-400.gif" alt="project - Whats for Dinner -mobile">
+                </div>
+              </a>
 
+              <a href="https://jasonpaff.github.io/WhatsForDinner" target="_blank">
+                <div class="projectPicWrap">
+                  <!-- <a id="projectDinner" class="projectPic" href="https://jasonpaff.github.io/WhatsForDinner" target="_blank"> </a> -->
+                  <img class="projectPic static" src="./img/projects/whatsForDinner.png" alt="project - Whats for Dinner">
+                  <img class="projectPic animated" src="./img/projects/whatsForDinner-576.gif" alt="project - Whats for Dinner">
+                </div>
+              </a>
 
-              <div class=" projectInfoWrap">
+              <div class="projectInfoWrap">
 
+                <!-- <a href="https://jasonpaff.github.io/WhatsForDinner"> -->
                 <h5>Whats for Dinner</h5>
+                <!-- </a> -->
 
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque consequuntur iusto
-                  optio enim ab voluptatem veritatis officiis ratione autem, itaque ad harum
-                  voluptates ipsa.
+                  Cooking App will give you recipes based on what you have in your pantry.
+                  Recipes can be sorted by max used ingredients from givin list, or min missing ones
                 </p>
 
                 <div class="gitHubLink">
@@ -164,9 +176,9 @@
 
                 <label>technologies used:</label>
                 <figure>
-                  <i class="devicon-html5-plain"></i>
-                  <i class="devicon-css3-plain"></i>
-                  <i class="devicon-javascript-plain"></i>
+                  <i title="HTML" class="devicon-html5-plain"></i>
+                  <i title="CSS" class="devicon-css3-plain"></i>
+                  <i title="JavaScript" class="devicon-javascript-plain"></i>
                   <span>{REST API}</span>
                 </figure>
 
@@ -178,7 +190,6 @@
 
               <img class="projectPic-m" src="./img/projects/tasks-m.png" alt="project - Whats for Dinner -mobile">
               <img class="projectPic" src="./img/projects/tasks.png" alt="project - Whats for Dinner ">
-
 
 
               <div class="projectInfoWrap">
@@ -195,11 +206,11 @@
 
                 <label>technologies used:</label>
                 <figure>
-                  <i class="devicon-html5-plain"></i>
-                  <i class="devicon-css3-plain"></i>
-                  <i class="devicon-javascript-plain"></i>
-                  <i class="devicon-express-original"></i>
-                  <i class="icon-mongodb"></i>
+                  <i title="HTML" class="devicon-html5-plain"></i>
+                  <i title="CSS" class="devicon-css3-plain"></i>
+                  <i title="JavaScript" class="devicon-javascript-plain"></i>
+                  <i title="MongoDB" class="devicon-mongodb-plain"></i>
+                  <i title="Express js" class="devicon-express-original"></i>
                 </figure>
 
               </div>
@@ -231,42 +242,13 @@
                   <i class="devicon-css3-plain"></i>
                   <i class="devicon-javascript-plain"></i>
                   <span>API</span>
+
                 </figure>
 
               </div>
             </article>
 
-            <!-- PROJECT -->
-            <article class="project">
 
-              <img class="projectPic-m" src="./img/projects/whatsForDinner-m.png" alt="project - Whats for Dinner -mobile">
-
-              <img class="projectPic static" src="./img/projects/whatsForDinner.png" alt="project - Whats for Dinner ">
-
-
-
-              <div class="projectInfoWrap">
-
-                <h5>Portfolio Website</h5>
-
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque consequuntur iusto
-                  optio enim ab voluptatem veritatis officiis ratione autem, itaque ad harum
-                  voluptates ipsa.
-                </p>
-
-                <h6>GitHub</h6>
-
-                <label>technologies used:</label>
-                <figure>
-                  <i class="devicon-html5-plain"></i>
-                  <i class="devicon-css3-plain"></i>
-                  <i class="devicon-javascript-plain"></i>
-                  <span>API</span>
-                </figure>
-
-              </div>
-            </article>
 
           </div>
         </section>
@@ -274,18 +256,23 @@
         <section id="contactWrap">
           <div id="contactContainer" class="container">
 
+            <!-- <form action="https://formsubmit.co/sergheitolstov@gmail.com" method="POST" id="contactForm""> -->
 
+            <form action="javascript:void(0);" id="contactForm" onsubmit="sendEmail()">
+              <h4 id="contactInTouch">get in touch_</h4>
 
-            <form action="javascript:void(0);" id="contactForm">
-              <h4>get in touch_</h4>
-              <label for="nameInput" id="labelName">name:</label>
-              <input type="text" id="nameInput" placeholder="Your name" required>
+              <!-- <input type="text" id="honeyPot" name="_honey" style="display:none"> -->
+              <!-- <input type="hidden" name="_captcha" value="false"> -->
+              <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/DC--Projects/DC--Portfolio/index.html#contactWrap"> -->
+
+              <label for=" nameInput" id="labelName">name:</label>
+              <input name="name" type="text" id="nameInput" placeholder="Your name" required>
 
               <label for="emailInput" id="labelEmail">email</label>
-              <input type="email" id="emailInput" placeholder="Your email" required>
+              <input name="email" type="email" id="emailInput" placeholder="Your email" required>
 
               <label for="messageInput" id="labelMessage">message</label>
-              <textarea type="text" id="messageInput" rows="8" placeholder="How can I help you?" required></textarea>
+              <textarea name="message" type="text" id="messageInput" rows="8" placeholder="How can I help you?" required></textarea>
 
               <button id="sendForm">send</button>
 

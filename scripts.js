@@ -6,6 +6,7 @@ const labelMessage = document.getElementById("labelMessage");
 const nameInput = document.getElementById("nameInput");
 const emailInput = document.getElementById("emailInput");
 const messageInput = document.getElementById("messageInput");
+const contactInTouch = document.getElementById("contactInTouch");
 
 const scroll = new SmoothScroll('#navMenu a[href*="#"]', { speed: 400 });
 
@@ -24,7 +25,7 @@ colorMode.onclick = function () {
 function hideLabel(input, label) {
   input.addEventListener("keyup", () => {
     label.style.visibility = "visible";
-    console.log(input.value);
+
     if (input.value === "") {
       label.style = "hidden";
     }
@@ -34,3 +35,33 @@ function hideLabel(input, label) {
 hideLabel(nameInput, labelName);
 hideLabel(emailInput, labelEmail);
 hideLabel(messageInput, labelMessage);
+
+async function sendEmail() {
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/sergheitolstov@gmail.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: nameInput.value,
+        email: emailInput.value,
+        message: messageInput.value,
+      }),
+    });
+    //   const data = response;
+    if (response.status === 200) {
+      contactInTouch.innerHTML = " Message sent!";
+      nameInput.value = "";
+      emailInput.value = "";
+      messageInput.value = "";
+    } else {
+      contactInTouch.innerHTML = " Something went wrong ";
+    }
+
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
