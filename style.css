@@ -5,7 +5,7 @@
 /* write to local storage previous Color mode */
 /* MObile viewPort */
 
-:root {
+body {
   --color-bg: #e5e5e5;
   --color-main: #4a5363;
   /* --color-main: #677180; */
@@ -156,7 +156,6 @@ header {
 nav {
   max-width: var(--width-max);
   height: 100%;
-  /* border: 1px solid red; */
   margin: auto;
 }
 
@@ -336,7 +335,7 @@ nav {
 
 .project {
   margin: 40px auto;
-  max-width: 1100px;
+  max-width: var(--width-max);
   max-height: 400px;
   position: relative;
   padding: 40px;
@@ -344,13 +343,22 @@ nav {
   border-radius: var(--box-border-radius);
   display: flex;
   flex-direction: row;
+  /* flex-wrap: wrap; */
   gap: 30px;
   align-items: center;
+  justify-content: space-around;
 }
-
-.projectPicWrap {
+.project a:hover {
+  transform: scale(1.2);
+  z-index: 2;
+}
+.projectPicWrap,
+.projectPicWrap-m {
   position: relative;
   z-index: 1;
+}
+.projectPicWrap {
+  /* width: 900px; */
 }
 
 .projectPic-m,
@@ -358,20 +366,17 @@ nav {
   box-shadow: var(--box-shadow);
   border: var(--box-border-dark);
   border-radius: var(--box-border-radius);
+  width: 100%;
 }
 
 .projectPic-m {
-  height: 280px;
-  width: 300;
-}
-.project a:hover {
-  transform: scale(1.2);
-  z-index: 2;
+  max-height: 280px;
+  max-width: 129px;
 }
 
 .projectPic {
-  height: 300px;
-  width: 476px;
+  max-height: 300px;
+  max-width: 476px;
 }
 
 .animated {
@@ -386,7 +391,6 @@ nav {
 
 /* #projectDinner {
   display: block;
-
   background-image: url("./img/projects/whatsForDinner.png");
 }
 #projectDinner:hover {
@@ -399,13 +403,17 @@ nav {
   flex-direction: column;
   gap: 8px;
   min-height: 300px;
+  max-width: 300px;
 }
 .projectInfoWrap p {
   flex-grow: 1;
 }
 
 .projectInfoWrap h6 {
+  margin-top: 16px;
   text-decoration: underline;
+  font-size: 24px;
+  font-weight: 400;
 }
 
 .projectInfoWrap a {
@@ -464,11 +472,9 @@ nav {
   color: var(--color-font-h-reverse);
   position: absolute;
   align-self: center;
-
   top: 20px;
   /* bottom: 0; */
   /* top: 80px; */
-
   line-height: 3rem;
   font-size: 3rem;
   text-align: center;
@@ -497,6 +503,7 @@ textarea {
   border-radius: var(--box-border-radius);
   border: var(--box-border-light);
   background-color: var();
+  width: 100%;
 }
 
 #contactForm textarea {
@@ -557,4 +564,214 @@ footer {
   font-weight: 200px;
   color: rgb(116, 116, 116);
   background-color: var(--color-bg);
+}
+
+@media (max-height: 940px) {
+  #landing {
+    height: 100%;
+  }
+  #toolsWrap {
+    height: 100%;
+    position: relative;
+  }
+  .tool {
+    text-align: center;
+    font-size: 3vh;
+    color: var(--color-font-h);
+  }
+}
+
+@media screen and (max-width: 1020px) {
+  body {
+    --width-max: 800px;
+    --height-profile: 140px;
+  }
+
+  #colorMode {
+    right: 10px;
+  }
+  #landing {
+    height: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  h3 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  #profileWrap {
+    position: relative;
+    z-index: 3;
+  }
+
+  #profilePic {
+    left: 6vw;
+    height: 180px;
+  }
+  #profileText {
+    left: 8vw;
+  }
+
+  #profileSocMed {
+    margin-top: 6px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  #profileSocMed .fa-brands {
+    font-size: 18px;
+    /* transition: all 0.2s ease-in-out; */
+  }
+
+  #info {
+    padding: 20px;
+    margin: 3vh auto 0;
+    width: 96%;
+  }
+  #info p {
+    font-size: 16px;
+  }
+
+  #toolsWrap {
+    position: relative;
+    height: 60px;
+  }
+  .tool {
+    font-size: 40px;
+    line-height: 40px;
+    height: 40px;
+  }
+
+  #projectsWrap {
+    padding: 0 0 40px;
+  }
+
+  .projectInfoWrap {
+    min-height: auto;
+  }
+
+  .project {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      ". ."
+      "projectInfoWrap projectInfoWrap";
+    position: relative;
+    max-height: inherit;
+  }
+
+  .projectInfoWrap {
+    grid-area: projectInfoWrap;
+    max-width: 100%;
+  }
+
+  #contactForm {
+    width: 580px;
+    padding: 60px 60px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+  }
+  #contactForm {
+    width: 320px;
+    padding: 60px 30px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    --height-profile: 130px;
+  }
+  #landing {
+    padding-top: 36px;
+  }
+  header {
+    /* top: 84vh; */
+    top: calc(100vh - var(--height-navbar));
+  }
+  nav {
+    border: var(--box-border-dark);
+  }
+  #navMenu {
+    padding: 0 30px;
+    width: 100vw;
+    text-align: center;
+    justify-content: space-around;
+
+    /* padding-right: 50px; */
+  }
+
+  h1 {
+    font-size: 5vw;
+  }
+  h2 {
+    font-size: 3.8vw;
+  }
+  h3 {
+    font-size: 3.3vw;
+  }
+
+  #profileWrap {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* #profile {
+    display: flex;
+    min-height: 20vh;
+  } */
+
+  #profilePic {
+    left: 10px;
+    height: 40vw;
+  }
+  #profileText {
+    left: 5vw;
+  }
+  #info {
+    padding: 20px;
+  }
+  #info p {
+    font-size: 14px;
+  }
+  #toolsWrap {
+    width: 96%;
+    margin: auto;
+  }
+  .tool {
+    font-size: 28px;
+  }
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .projectPicWrap-m {
+    /* display: block; */
+    height: 570px;
+    width: 262px;
+  }
+  .projectPic-m {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .project a:hover {
+    transform: scale(1);
+  }
+  footer {
+    padding-bottom: 100px;
+  }
 }
