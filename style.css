@@ -430,6 +430,7 @@ nav {
 
 .projectInfoWrap figure {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   font-size: 32px;
   font-weight: 200;
