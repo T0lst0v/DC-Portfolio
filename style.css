@@ -3,7 +3,6 @@
 /* Project Gif */
 /* Project Logic / GitHub ReadMee */
 /* write to local storage previous Color mode */
-/* MObile viewPort */
 
 body {
   --color-bg: #e5e5e5;
@@ -660,7 +659,7 @@ footer {
   .project {
     margin: 20px;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: auto;
     grid-template-areas:
       ". ."
