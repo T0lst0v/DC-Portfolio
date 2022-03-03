@@ -716,10 +716,12 @@ footer {
   #landing {
     padding-top: 36px;
   }
+
   header {
     /* top: 84vh; */
-    touch-action: none;
-    top: 95vh;
+    /* touch-action: none;
+    top: 95vh; */
+    bottom: 0;
   }
   nav {
     border: var(--box-border-dark);
