@@ -277,13 +277,13 @@ nav {
 
 #info p {
   text-indent: 20px;
-  font-size: 18px;
+  font-size: 1.8vh;
 
   /* font-size: 1.6vh; */
 }
 
 #info hr {
-  margin: 24px;
+  margin: 2vh;
   border: 1px solid var(--color-accent-l);
 }
 
@@ -571,16 +571,17 @@ footer {
   body {
     --height-navbar: 40px;
   }
-  #landing {
-    height: 100%;
+
+  #info {
+    margin-top: 4vh;
   }
   #info p {
     font-size: 2vh;
   }
 
   #toolsWrap {
-    height: 100%;
-    position: relative;
+    /* height: 100%; */
+    /* position: relative; */
   }
   .tool {
     text-align: center;
@@ -600,25 +601,10 @@ footer {
 @media screen and (max-width: 1020px) {
   body {
     --width-max: 800px;
-    --height-profile: 140px;
   }
 
   #colorMode {
     right: 10px;
-  }
-  #landing {
-    height: 100%;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-  h2 {
-    font-size: 18px;
-  }
-  h3 {
-    font-size: 14px;
-    line-height: 20px;
   }
 
   #profileWrap {
@@ -627,11 +613,10 @@ footer {
   }
 
   #profilePic {
-    left: 6vw;
-    height: 180px;
+    left: 2vw;
   }
   #profileText {
-    left: 8vw;
+    left: 4vw;
   }
 
   #profileSocMed {
@@ -652,17 +637,17 @@ footer {
     width: 96%;
   }
   #info p {
-    font-size: 16px;
+    font-size: 1.7vh;
   }
 
   #toolsWrap {
-    position: relative;
-    height: 60px;
+    /* position: relative; */
+    height: 4vh;
   }
   .tool {
-    font-size: 40px;
-    line-height: 40px;
-    height: 40px;
+    font-size: 4vh;
+    line-height: 4vh;
+    height: 4vh;
   }
 
   #projectsWrap {
@@ -696,9 +681,27 @@ footer {
   }
 }
 @media screen and (max-width: 600px) {
+  #landing {
+    height: 100%;
+  }
   .project {
     display: flex;
     flex-direction: column;
+  }
+
+  #toolsWrap {
+    position: relative;
+
+    min-height: 60px;
+  }
+  #tools {
+    margin: 2vw;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: space-around;
+  }
+  .tool {
+    font-size: 40px;
   }
   #contactForm {
     width: 320px;
@@ -715,6 +718,7 @@ footer {
   }
   header {
     /* top: 84vh; */
+    touch-action: none;
     top: calc(100vh - var(--height-navbar));
   }
   nav {
