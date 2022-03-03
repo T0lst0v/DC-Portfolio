@@ -719,7 +719,7 @@ footer {
   header {
     /* top: 84vh; */
     touch-action: none;
-    top: calc(100vh - var(--height-navbar));
+    top: 95vh;
   }
   nav {
     border: var(--box-border-dark);
