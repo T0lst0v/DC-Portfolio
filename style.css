@@ -301,8 +301,9 @@ nav {
 #tools {
   position: relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
+
   height: 100%;
 }
 
@@ -566,18 +567,33 @@ footer {
   background-color: var(--color-bg);
 }
 
-@media (max-height: 940px) {
+@media (max-height: 899px) {
+  body {
+    --height-navbar: 40px;
+  }
   #landing {
     height: 100%;
   }
+  #info p {
+    font-size: 2vh;
+  }
+
   #toolsWrap {
     height: 100%;
     position: relative;
   }
   .tool {
     text-align: center;
-    font-size: 3vh;
+    font-size: 5vh;
+    height: 8vh;
+    line-height: 8vh;
     color: var(--color-font-h);
+  }
+  #projectsWrap {
+    padding-top: 0;
+  }
+  #contactForm {
+    padding: 60px;
   }
 }
 
