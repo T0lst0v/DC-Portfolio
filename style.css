@@ -684,6 +684,9 @@ footer {
   #landing {
     height: 100%;
   }
+  #navMenu {
+    padding-right: 30px;
+  }
   .project {
     display: flex;
     flex-direction: column;
@@ -709,30 +712,9 @@ footer {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 520px) {
   body {
     --height-profile: 130px;
-  }
-  #landing {
-    padding-top: 36px;
-  }
-
-  header {
-    /* top: 84vh; */
-    /* touch-action: none;
-    top: 95vh; */
-    bottom: 0;
-  }
-  nav {
-    border: var(--box-border-dark);
-  }
-  #navMenu {
-    padding: 0 30px;
-    width: 100vw;
-    text-align: center;
-    justify-content: space-around;
-
-    /* padding-right: 50px; */
   }
 
   h1 {
@@ -743,6 +725,7 @@ footer {
   }
   h3 {
     font-size: 3.3vw;
+    line-height: 2.4vh;
   }
 
   #profileWrap {
@@ -750,14 +733,9 @@ footer {
     z-index: 3;
   }
 
-  /* #profile {
-    display: flex;
-    min-height: 20vh;
-  } */
-
   #profilePic {
     left: 10px;
-    height: 40vw;
+    height: 32vw;
   }
   #profileText {
     left: 5vw;
@@ -768,6 +746,39 @@ footer {
   #info p {
     font-size: 14px;
   }
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    /* top: 84vh; */
+    /* touch-action: none;
+    top: 95vh; */
+    bottom: 0;
+  }
+  nav {
+    border: var(--box-border-dark);
+  }
+  #landing {
+    padding-top: 36px;
+  }
+
+  #navMenu {
+    padding: 0 30px;
+    width: 100vw;
+    text-align: center;
+    justify-content: space-around;
+
+    /* padding-right: 50px; */
+  }
+  /* #profile {
+    display: flex;
+    min-height: 20vh;
+  } */
+  #profilePic {
+    left: 10px;
+    height: 40vw;
+  }
+
   #toolsWrap {
     width: 96%;
     margin: auto;
