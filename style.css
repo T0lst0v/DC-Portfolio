@@ -303,11 +303,11 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-
   height: 100%;
 }
 
 .tool {
+  position: relative;
   text-align: center;
   font-size: 5vh;
   line-height: 5vh;
@@ -315,6 +315,25 @@ nav {
   color: var(--color-font-h);
 }
 
+.toolTitle {
+  width: 200%;
+  display: none;
+  right: -50%;
+  color: var(--color-accent-l);
+
+  position: absolute;
+  padding: 6px;
+  font-family: var(--font-p);
+  font-weight: 600;
+  line-height: 1.2rem;
+  font-size: 30%;
+
+  z-index: 3;
+}
+
+.tool:hover .toolTitle {
+  display: block;
+}
 /* PROJECTS */
 #projectsWrap {
   /* min-height: calc(100vh - var(--height-navbar)); */

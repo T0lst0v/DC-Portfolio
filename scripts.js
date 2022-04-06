@@ -9,6 +9,21 @@ const messageInput = document.getElementById("messageInput");
 const contactInTouch = document.getElementById("contactInTouch");
 
 const scroll = new SmoothScroll('#navMenu a[href*="#"]', { speed: 400 });
+const colorModeChoice = localStorage.getItem("colorMode");
+
+function previousColorMode() {
+  if (colorModeChoice === "light") {
+    document.body.classList.remove("dark");
+    profilePic.src = "./img/light.jpg";
+    colorMode.src = "./img/svg/moon.svg";
+  } else {
+    colorMode.classList.remove("fa-moon");
+    colorMode.src = "./img/svg/sun.svg";
+    profilePic.src = "./img/dark.jpg";
+  }
+}
+
+// onload.apply(document.body.classList.toggle("colorModeChoice"));
 
 colorMode.onclick = function () {
   document.body.classList.toggle("dark");
@@ -16,9 +31,11 @@ colorMode.onclick = function () {
     colorMode.classList.remove("fa-moon");
     colorMode.src = "./img/svg/sun.svg";
     profilePic.src = "./img/dark.jpg";
+    localStorage.setItem("colorMode", "dark");
   } else {
     profilePic.src = "./img/light.jpg";
     colorMode.src = "./img/svg/moon.svg";
+    localStorage.setItem("colorMode", "light");
   }
 };
 
