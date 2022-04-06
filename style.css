@@ -263,8 +263,8 @@ nav {
 
 /* INFO */
 #infoWrap {
-  padding-top: 30px;
-  height: calc(100% - var(--height-navbar) - var(--height-profile));
+  padding: 4vh 40px 0;
+  height: calc(100% - var(--height-profile));
 }
 
 #info {
@@ -606,6 +606,7 @@ footer {
   #toolsWrap {
     /* height: 100%; */
     /* position: relative; */
+    padding-bottom: 3vh;
   }
   .tool {
     text-align: center;
@@ -653,6 +654,10 @@ footer {
   #profileSocMed .fa-brands {
     font-size: 18px;
     /* transition: all 0.2s ease-in-out; */
+  }
+
+  #infoWrap {
+    height: calc(100% - var(--height-navbar) - var(--height-profile));
   }
 
   #info {
@@ -711,6 +716,9 @@ footer {
   #navMenu {
     padding-right: 30px;
   }
+  #infoWrap {
+    padding: 0;
+  }
   .project {
     display: flex;
     flex-direction: column;
@@ -742,14 +750,14 @@ footer {
   }
 
   h1 {
-    font-size: 5vw;
+    font-size: 4.6vw;
   }
   h2 {
-    font-size: 3.8vw;
+    font-size: 3.6vw;
   }
   h3 {
-    font-size: 3.3vw;
-    line-height: 2.4vh;
+    font-size: 3.2vw;
+    line-height: 2.2vh;
   }
 
   #profileWrap {
