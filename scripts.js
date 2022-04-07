@@ -11,6 +11,20 @@ const contactInTouch = document.getElementById("contactInTouch");
 const scroll = new SmoothScroll('#navMenu a[href*="#"]', { speed: 400 });
 const colorModeChoice = localStorage.getItem("colorMode");
 
+const pawster = "https://pawster.herokuapp.com/";
+const movieLib = "https://dc-movie-library.herokuapp.com";
+
+async function awake(URL) {
+  const response = await fetch(URL, {
+    method: "GET",
+  });
+  console.log("Awakening website: ");
+  console.log(response);
+}
+
+awake(pawster);
+awake(movieLib);
+
 function previousColorMode() {
   if (colorModeChoice === "light") {
     document.body.classList.remove("dark");
