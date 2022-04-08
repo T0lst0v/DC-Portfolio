@@ -182,7 +182,7 @@ nav {
 
 #colorMode {
   position: absolute;
-  right: 0;
+  right: 1rem;
   height: 20px;
   cursor: pointer;
   transition: 0.3s;
@@ -320,7 +320,7 @@ nav {
   width: 200%;
   display: none;
   right: -50%;
-  color: var(--color-accent-l);
+  color: var(--color-accent);
 
   position: absolute;
   padding: 6px;
@@ -359,7 +359,7 @@ nav {
 .project {
   margin: 40px;
   max-width: var(--width-max);
-  max-height: 400px;
+  min-height: 400px;
   position: relative;
   padding: 40px;
   border: var(--box-border-light);
@@ -412,15 +412,6 @@ nav {
 .static:hover {
   opacity: 0;
 }
-
-/* #projectDinner {
-  display: block;
-  background-image: url("./img/projects/whatsForDinner.png");
-}
-#projectDinner:hover {
-  background-image: url("./img/projects/whatsForDinner-576.gif");
-  transform: scale(1.2);
-} */
 
 .projectInfoWrap {
   display: flex;
@@ -486,7 +477,7 @@ nav {
   display: flex;
   flex-direction: column;
   width: 800px;
-  padding: 100px;
+  padding: 80px;
   border-radius: var(--box-border-radius);
   box-shadow: var(--box-shadow);
   border-top: var(--box-border-lighter);
@@ -497,9 +488,8 @@ nav {
   color: var(--color-font-h-reverse);
   position: absolute;
   align-self: center;
-  top: 20px;
-  /* bottom: 0; */
-  /* top: 80px; */
+  top: 24px;
+
   line-height: 3rem;
   font-size: 3rem;
   text-align: center;
@@ -509,7 +499,6 @@ nav {
 #contactForm label {
   visibility: hidden;
   color: var(--color-font-h-reverse);
-  /* font-family: var(--font-m); */
   font-weight: 100;
   font-size: 16px;
   line-height: 14px;
@@ -595,108 +584,123 @@ footer {
   body {
     --height-navbar: 40px;
   }
-
-  #info {
-    margin-top: 4vh;
-  }
   #info p {
-    font-size: 2vh;
+    font-size: 0.9rem;
   }
 
-  #toolsWrap {
-    /* height: 100%; */
-    /* position: relative; */
-    padding-bottom: 3vh;
-  }
-  .tool {
-    text-align: center;
-    font-size: 5vh;
-    height: 8vh;
-    line-height: 8vh;
-    color: var(--color-font-h);
-  }
-  #projectsWrap {
-    padding-top: 0;
-  }
   #contactForm {
-    padding: 60px;
+    padding: 40px;
+  }
+  #contactForm h4 {
+    top: 14px;
   }
 }
-
-@media screen and (max-width: 1020px) {
+@media (max-height: 720px) {
   body {
-    --width-max: 800px;
+    --height-profile: 120px;
   }
-
-  #colorMode {
-    right: 10px;
+  h1 {
+    font-size: 1.3rem;
   }
-
-  #profileWrap {
-    position: relative;
-    z-index: 3;
+  h2 {
+    font-size: 0.9rem;
   }
-
+  h3 {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  body {
+    --height-navbar: 40px;
+    --height-profile: 120px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
   #profilePic {
-    left: 2vw;
+    left: 12vw;
+    height: 150px;
+    top: -15px;
   }
   #profileText {
-    left: 4vw;
+    margin-top: 4px;
+    left: 14vw;
   }
 
   #profileSocMed {
-    margin-top: 6px;
-    display: flex;
-    flex-direction: row;
+    margin-top: 4px;
     gap: 24px;
   }
-
   #profileSocMed .fa-brands {
-    font-size: 18px;
-    /* transition: all 0.2s ease-in-out; */
+    font-size: 1rem;
   }
+}
 
-  #infoWrap {
-    height: calc(100% - var(--height-navbar) - var(--height-profile));
-  }
-
-  #info {
-    padding: 20px;
-    margin: 3vh auto 0;
-    width: 96%;
-  }
-  #info p {
-    font-size: 1.7vh;
+@media (max-height: 680px) {
+  #landing {
+    height: 100%;
   }
 
   #toolsWrap {
-    /* position: relative; */
-    height: 4vh;
+    position: relative;
+    height: 100px;
+  }
+
+  #tools {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
   }
   .tool {
-    font-size: 4vh;
-    line-height: 4vh;
-    height: 4vh;
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    line-height: 5vh;
+
+    color: var(--color-font-h);
+  }
+
+  #contactWrap {
+    margin-top: 1rem;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  body {
+    --height-navbar: 40px;
+  }
+  #info {
+    padding: 20px;
+  }
+  #info p {
+    font-size: 1rem;
+  }
+
+  #contactForm {
+    padding: 40px;
+  }
+  #contactForm h4 {
+    top: 14px;
   }
 
   #projectsWrap {
     padding: 0 0 40px;
   }
-
-  .projectInfoWrap {
-    min-height: auto;
-  }
-
   .project {
     margin: 20px;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto;
     grid-template-areas:
       ". ."
       "projectInfoWrap projectInfoWrap";
-    position: relative;
-    max-height: inherit;
+    justify-items: center;
   }
 
   .projectInfoWrap {
@@ -704,86 +708,81 @@ footer {
     max-width: 100%;
   }
 
-  #contactForm {
-    width: 580px;
-    padding: 60px 60px;
+  .projectInfoWrap {
+    min-height: auto;
   }
 }
-@media screen and (max-width: 650px) {
+
+@media screen and (max-width: 740px) {
   #landing {
     height: 100%;
   }
-  #navMenu {
-    padding-right: 30px;
+  body {
+    --height-profile: 120px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  body {
+    --height-navbar: 40px;
+    --height-profile: 120px;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  h3 {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  #profilePic {
+    left: 4vw;
+    height: 150px;
+    top: -15px;
+  }
+  #profileText {
+    margin-top: 4px;
+    left: 6vw;
+  }
+
+  #profileSocMed {
+    margin-top: 4px;
+    gap: 24px;
+  }
+  #profileSocMed .fa-brands {
+    font-size: 1rem;
   }
   #infoWrap {
-    padding: 0;
+    padding: 10px;
+  }
+  #toolsWrap {
+    position: relative;
+    height: 100px;
+  }
+  .tool {
+    font-size: 30px;
+    line-height: 30px;
+    height: 30px;
   }
   .project {
     display: flex;
     flex-direction: column;
-  }
-
-  #toolsWrap {
-    position: relative;
-
-    min-height: 60px;
-  }
-  #tools {
-    margin: 2vw;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: space-around;
-  }
-  .tool {
-    font-size: 40px;
-  }
-  #contactForm {
-    width: 320px;
-    padding: 60px 30px;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  body {
-    --height-profile: 130px;
-  }
-
-  h1 {
-    font-size: 4.6vw;
-  }
-  h2 {
-    font-size: 3.6vw;
-  }
-  h3 {
-    font-size: 3.2vw;
-    line-height: 2.2vh;
-  }
-
-  #profileWrap {
-    position: relative;
-    z-index: 3;
-  }
-
-  #profilePic {
-    left: 10px;
-    height: 32vw;
-  }
-  #profileText {
-    left: 5vw;
-  }
-  #info {
-    padding: 20px;
-  }
-  #info p {
-    font-size: 14px;
+    gap: 20px;
+    padding: 30px 20px;
   }
   .projectPic {
-    margin: auto;
-    width: 100%;
+    max-width: 100%;
   }
   .projectPicWrap-m {
-    /* display: block; */
     height: 570px;
     width: 262px;
   }
@@ -794,19 +793,19 @@ footer {
   .project a:hover {
     transform: scale(1);
   }
+}
 
-  /* @media screen and (max-width: 420px) { */
+@media screen and (max-width: 560px) {
+  #landing {
+    padding-top: 36px;
+    height: 100%;
+  }
+
   header {
-    /* top: 84vh; */
-    /* touch-action: none;
-    top: 95vh; */
     bottom: 0;
   }
   nav {
     border: var(--box-border-dark);
-  }
-  #landing {
-    padding-top: 36px;
   }
 
   #navMenu {
@@ -814,42 +813,6 @@ footer {
     width: 100vw;
     text-align: center;
     justify-content: space-around;
-
-    /* padding-right: 50px; */
-  }
-  /* #profile {
-    display: flex;
-    min-height: 20vh;
-  } */
-  #profilePic {
-    left: 10px;
-    height: 40vw;
-  }
-
-  #toolsWrap {
-    width: 96%;
-    margin: auto;
-  }
-  .tool {
-    font-size: 28px;
-  }
-  .project {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .projectPicWrap-m {
-    /* display: block; */
-    height: 570px;
-    width: 262px;
-  }
-  .projectPic-m {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  .project a:hover {
-    transform: scale(1);
   }
   footer {
     padding-bottom: 100px;
