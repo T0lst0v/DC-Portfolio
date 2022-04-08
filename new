@@ -147,7 +147,6 @@ header {
   width: 100%;
   height: var(--height-navbar);
   position: fixed;
-
   background-color: var(--color-bg);
   z-index: 3;
 }
@@ -712,9 +711,6 @@ footer {
   .projectInfoWrap {
     min-height: auto;
   }
-  #contactForm {
-    width: 90%;
-  }
 }
 
 @media screen and (max-width: 740px) {
@@ -817,9 +813,6 @@ footer {
     width: 100vw;
     text-align: center;
     justify-content: space-around;
-  }
-  #contactForm {
-    width: 95%;
   }
   footer {
     padding-bottom: 100px;
