@@ -14,17 +14,17 @@ const colorModeChoice = localStorage.getItem("colorMode");
 const pawster = "https://pawster.herokuapp.com/";
 const movieLib = "https://dc-movie-library.herokuapp.com";
 
+//awake project on Heroku for faster load
 async function awake(URL) {
   const response = await fetch(URL, {
     method: "GET",
   });
-  console.log("Awakening website: ");
-  console.log(response);
 }
 
 awake(pawster);
 awake(movieLib);
 
+//color mode based on previous selection
 function previousColorMode() {
   if (colorModeChoice === "light") {
     document.body.classList.remove("dark");
@@ -36,8 +36,6 @@ function previousColorMode() {
     profilePic.src = "./img/dark.jpg";
   }
 }
-
-// onload.apply(document.body.classList.toggle("colorModeChoice"));
 
 colorMode.onclick = function () {
   document.body.classList.toggle("dark");
@@ -53,6 +51,7 @@ colorMode.onclick = function () {
   }
 };
 
+// show/hide  label on input in contact form
 function hideLabel(input, label) {
   input.addEventListener("keyup", () => {
     label.style.visibility = "visible";
@@ -81,7 +80,7 @@ async function sendEmail() {
         message: messageInput.value,
       }),
     });
-    //   const data = response;
+
     if (response.status === 200) {
       contactInTouch.innerHTML = " Message sent!";
       nameInput.value = "";
@@ -90,8 +89,6 @@ async function sendEmail() {
     } else {
       contactInTouch.innerHTML = " Something went wrong ";
     }
-
-    console.log(data);
   } catch (error) {
     console.log(error);
   }

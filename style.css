@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Open+Sans:wght@300;400;500;600;700&display=swap");
-/* Projects descriptions */
-/* Project Gif */
-/* Project Logic / GitHub ReadMee */
-/* write to local storage previous Color mode */
 
 body {
   --color-bg: #e5e5e5;
@@ -567,7 +563,6 @@ textarea {
 
 #contactSocMed i:hover {
   color: var(--color-accent);
-  transform: scale(1.1);
 }
 
 footer {
