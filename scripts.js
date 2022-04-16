@@ -16,9 +16,7 @@ const movieLib = "https://dc-movie-library.herokuapp.com";
 
 //awake project on Heroku for faster load
 async function awake(URL) {
-  const response = await fetch(URL, {
-    method: "GET",
-  });
+  await fetch(URL, { method: "GET" });
 }
 
 awake(pawster);
@@ -33,7 +31,7 @@ function previousColorMode() {
   } else {
     colorMode.classList.remove("fa-moon");
     colorMode.src = "./img/svg/sun.svg";
-    profilePic.src = "./img/dark.jpg";
+    // profilePic.src = "./img/dark.jpg";
   }
 }
 
@@ -42,7 +40,7 @@ colorMode.onclick = function () {
   if (document.body.classList.contains("dark")) {
     colorMode.classList.remove("fa-moon");
     colorMode.src = "./img/svg/sun.svg";
-    profilePic.src = "./img/dark.jpg";
+    profilePic.src = "./img/dark-noise.jpg";
     localStorage.setItem("colorMode", "dark");
   } else {
     profilePic.src = "./img/light.jpg";
