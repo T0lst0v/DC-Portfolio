@@ -669,7 +669,7 @@ footer {
     height: 100%;
   }
 }
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1079px) {
   body {
     --height-navbar: 40px;
   }
