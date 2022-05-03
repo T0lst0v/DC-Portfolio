@@ -5,5 +5,5 @@
 Website where I can present my skills abilities and personality. In a future would like to implement blogging as well.
 
 
-[https://github.com/T0lst0v/DC-Portfolio]
+[https://tolstov.dev]
 
