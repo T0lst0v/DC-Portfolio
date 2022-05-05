@@ -1,5 +1,5 @@
-const colorMode = document.getElementById("colorMode");
-const profilePic = document.getElementById("profilePic");
+const colorMode = document.getElementById("color-mode");
+const profilePic = document.getElementById("profile__pic");
 const labelName = document.getElementById("labelName");
 const labelEmail = document.getElementById("labelEmail");
 const labelMessage = document.getElementById("labelMessage");

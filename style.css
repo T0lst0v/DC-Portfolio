@@ -123,7 +123,7 @@ section {
   scroll-snap-align: center;
 }
 
-#bodyContainer {
+#body-container {
   width: 100%;
   height: 100%;
 
@@ -154,7 +154,7 @@ nav {
   margin: auto;
 }
 
-#navMenu {
+#nav-menu {
   position: relative;
   height: 100%;
   display: flex;
@@ -169,7 +169,7 @@ nav {
   font-weight: var(--font-weight-h);
 }
 
-#navMenu li {
+#nav-menu li {
   display: flex;
   height: 100%;
   align-items: center;
@@ -177,7 +177,7 @@ nav {
   transition: 0.2s;
 }
 
-#colorMode {
+#color-mode {
   position: absolute;
   right: 1rem;
   height: 20px;
@@ -186,12 +186,12 @@ nav {
   filter: invert(56%) sepia(34%) saturate(393%) hue-rotate(133deg) brightness(95%) contrast(92%);
 }
 
-#colorMode:hover {
+#color-mode:hover {
   transform: scale(1.2);
   color: var(--color-accent-l);
 }
 
-/* #navMenu li:hover {
+/* #nav-menu li:hover {
   background-color: var(--color-main);
   color: var(--color-font-p-reverse);
   color: var(--color-accent-l);
@@ -200,14 +200,14 @@ nav {
 } */
 
 /* PROFILE */
-#landing {
+#landing-wrap {
   position: relative;
   /* padding-top: 6vh; */
   padding-top: var(--height-navbar);
   height: 100vh;
 }
 
-#profileWrap {
+#profile-wrap {
   position: relative;
   height: var(--height-profile);
   max-height: 330px;
@@ -220,7 +220,7 @@ nav {
   min-height: 24vh;
 }
 
-#profilePic {
+#profile__pic {
   position: relative;
   height: 24vh;
   max-height: 400px;
@@ -233,10 +233,7 @@ nav {
   box-shadow: var(--box-shadow);
 }
 
-#mainContainer {
-}
-
-#profileText {
+#profile__text {
   position: relative;
   margin-top: 0.5vh;
   left: 6%;
@@ -244,24 +241,24 @@ nav {
   list-style: none;
 }
 
-#profileSocMed {
+#profile__soc-med {
   margin-top: 1vh;
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
 
-#profileSocMed .fa-brands {
+#profile__soc-med .fa-brands {
   font-size: min(2vh, 32px);
   /* transition: all 0.2s ease-in-out; */
 }
 
-#profileSocMed .fa-brands:hover {
+#profile__soc-med .fa-brands:hover {
   color: var(--color-accent-l);
 }
 
 /* INFO */
-#infoWrap {
+#info-wrap {
   padding: 4vh 40px 0;
   height: calc(100% - var(--height-profile));
 }
@@ -287,11 +284,11 @@ nav {
   border: 1px solid var(--color-accent-l);
 }
 
-#timeTable p {
+#info__dates p {
   margin: 4px;
 }
 
-#toolsWrap {
+#tools-wrap {
   position: absolute;
   height: 14vh;
   width: 100%;
@@ -306,7 +303,7 @@ nav {
   height: 100%;
 }
 
-.tool {
+.tools__tool {
   position: relative;
   text-align: center;
   font-size: 5vh;
@@ -315,7 +312,7 @@ nav {
   color: var(--color-font-h);
 }
 
-.toolTitle {
+.tools__tool-title {
   width: 200%;
   display: none;
   right: -50%;
@@ -331,13 +328,12 @@ nav {
   z-index: 3;
 }
 
-.tool:hover .toolTitle {
+.tools__tool:hover .tools__tool-title {
   display: block;
 }
+
 /* PROJECTS */
-#projectsWrap {
-  /* min-height: calc(100vh - var(--height-navbar)); */
-  /* margin-top: var(--height-navbar); */
+#projects-wrap {
   padding-top: var(--height-navbar);
   position: relative;
   background-color: var(--color-main);
@@ -345,7 +341,7 @@ nav {
   padding-bottom: 40px;
 }
 
-#projectsWrap h4 {
+#projects-wrap h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -374,17 +370,17 @@ nav {
   transform: scale(1.2);
   z-index: 2;
 }
-.projectPicWrap,
-.projectPicWrap-m {
+.project__pic-wrap,
+.project__pic-wrap-m {
   position: relative;
   z-index: 1;
 }
-.projectPicWrap {
+.project__pic-wrap {
   /* width: 900px; */
 }
 
-.projectPic-m,
-.projectPic {
+.project__pic-m,
+.project__pic {
   box-shadow: var(--box-shadow);
   border: var(--box-border-dark);
   border-radius: var(--box-border-radius);
@@ -392,18 +388,16 @@ nav {
   flex-shrink: 0;
 }
 
-.projectPic-m {
+.project__pic-m {
   max-height: 280px;
   max-width: 129px;
 }
 
-.projectPic {
+.project__pic {
   max-height: 300px;
   max-width: 476px;
 }
 
-.animated {
-}
 .static {
   position: absolute;
 }
@@ -412,57 +406,56 @@ nav {
   opacity: 0;
 }
 
-.projectInfoWrap {
+.project__info-wrap {
   display: flex;
   flex-direction: column;
   gap: 8px;
   min-height: 300px;
-  /* max-width: 300px; */
 }
-.projectInfoWrap p {
+.project__info-wrap p {
   flex-grow: 1;
 }
 
-.projectInfoWrap h6 {
+.project__info-wrap h6 {
   margin-top: 16px;
   text-decoration: underline;
   font-size: 24px;
   font-weight: 400;
 }
 
-.projectInfoWrap a {
+.project__info-wrap a {
   display: inline-block;
 }
 
-.projectInfoWrap a:hover {
+.project__info-wrap a:hover {
   color: var(--color-accent-l);
 }
 
-.projectInfoWrap label {
+.project__info-wrap label {
   font-size: 14px;
   font-weight: 300;
 }
 
-.projectInfoWrap figure {
+.project__info-wrap figure {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   font-size: 32px;
   font-weight: 200;
 }
-.projectInfoWrap span {
+.project__info-wrap span {
   font-size: 22px;
   line-height: 100%;
   align-self: center;
 }
 
 /* CONTACT */
-#contactWrap {
+#contact-wrap {
   background-color: var(--color-bg);
   height: calc(100vh - var(--height-navbar) - var(--height-footer));
 }
 
-#contactWrap .container {
+#contact-wrap .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -470,7 +463,7 @@ nav {
   height: 100%;
 }
 
-#contactForm {
+#contact__form {
   position: relative;
   background-color: var(--color-main);
   display: flex;
@@ -483,7 +476,7 @@ nav {
   border-bottom: var(--box-border-dark);
 }
 
-#contactForm h4 {
+#contact__form h4 {
   color: var(--color-font-h-reverse);
   position: absolute;
   align-self: center;
@@ -495,7 +488,7 @@ nav {
   z-index: 2;
 }
 
-#contactForm label {
+#contact__form label {
   visibility: hidden;
   color: var(--color-font-h-reverse);
   font-weight: 100;
@@ -504,12 +497,12 @@ nav {
   padding: 6px 8px 3px;
 }
 
-#contactForm input {
+#contact__form input {
   height: 30px;
   color: var(--color-font-p);
 }
 
-#contactForm input,
+#contact__form input,
 textarea {
   padding: 8px;
   background-color: var(--color-bg);
@@ -519,7 +512,7 @@ textarea {
   width: 100%;
 }
 
-#contactForm textarea {
+#contact__form textarea {
   resize: vertical;
   color: var(--color-font-p);
 }
@@ -528,7 +521,7 @@ textarea {
   visibility: hidden;
 } */
 
-#sendForm {
+#contact__btn-send {
   margin-top: 20px;
   background-color: var(--color-accent);
   border: solid 1px var(--color-accent-l);
@@ -543,13 +536,13 @@ textarea {
   transition: 0.3s;
 }
 
-#sendForm:hover {
+#contact__btn-send:hover {
   background-color: var(--color-accent-l);
   box-shadow: none;
   transform: scale(0.98);
 }
 
-#contactSocMed {
+#contact__soc-med {
   display: flex;
   gap: 44px;
   margin-top: 40px;
@@ -557,13 +550,13 @@ textarea {
   color: var(--color-main);
 }
 
-#contactSocMed i {
+#contact__soc-med i {
   text-shadow: -0px 0 rgb(77, 77, 77), 0 0px rgb(77, 77, 77), 0px 0 rgb(77, 77, 77), 0 -01px rgb(96, 96, 96);
   transition: 0.3s;
   /* text-shadow: 0px 2px 2px #656565; */
 }
 
-#contactSocMed i:hover {
+#contact__soc-med i:hover {
   color: var(--color-accent);
 }
 
@@ -586,10 +579,10 @@ footer {
     font-size: 0.9rem;
   }
 
-  #contactForm {
+  #contact__form {
     padding: 40px;
   }
-  #contactForm h4 {
+  #contact__form h4 {
     top: 14px;
   }
 }
@@ -621,31 +614,31 @@ footer {
     font-size: 0.8rem;
     line-height: 1rem;
   }
-  #profilePic {
+  #profile__pic {
     left: 12vw;
     height: 150px;
     top: -15px;
   }
-  #profileText {
+  #profile__text {
     margin-top: 4px;
     left: 14vw;
   }
 
-  #profileSocMed {
+  #profile__soc-med {
     margin-top: 4px;
     gap: 24px;
   }
-  #profileSocMed .fa-brands {
+  #profile__soc-med .fa-brands {
     font-size: 1rem;
   }
 }
 
 @media (max-height: 680px) {
-  #landing {
+  #landing-wrap {
     height: 100%;
   }
 
-  #toolsWrap {
+  #tools-wrap {
     position: relative;
     height: 100px;
   }
@@ -657,7 +650,8 @@ footer {
     align-items: center;
     height: 100%;
   }
-  .tool {
+
+  .tools__tool {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -666,7 +660,7 @@ footer {
     color: var(--color-font-h);
   }
 
-  #contactWrap {
+  #contact-wrap {
     margin-top: 1rem;
     height: 100%;
   }
@@ -675,23 +669,27 @@ footer {
   body {
     --height-navbar: 40px;
   }
+
   #info {
     padding: 20px;
   }
+
   #info p {
     font-size: 1rem;
   }
 
-  #contactForm {
+  #contact__form {
     padding: 40px;
   }
-  #contactForm h4 {
+
+  #contact__form h4 {
     top: 14px;
   }
 
-  #projectsWrap {
+  #projects-wrap {
     padding: 0 0 40px;
   }
+
   .project {
     margin: 20px;
     display: grid;
@@ -701,75 +699,86 @@ footer {
     justify-items: center;
   }
 
-  .projectInfoWrap {
+  .project__info-wrap {
     grid-area: projectInfoWrap;
     max-width: 100%;
   }
 
-  .projectInfoWrap {
+  .project__info-wrap {
     min-height: auto;
   }
-  #contactForm {
+
+  #contact__form {
     width: 90%;
   }
 }
 
 @media screen and (max-width: 740px) {
-  #landing {
+  #landing-wrap {
     height: 100%;
   }
+
   body {
     --height-profile: 120px;
   }
+
   h1 {
     font-size: 1.3rem;
   }
+
   h2 {
     font-size: 0.9rem;
   }
+
   h3 {
     font-size: 0.8rem;
     line-height: 1rem;
   }
+
   body {
     --height-navbar: 40px;
     --height-profile: 120px;
   }
+
   h1 {
     font-size: 1.3rem;
   }
+
   h2 {
     font-size: 0.9rem;
   }
+
   h3 {
     font-size: 0.8rem;
     line-height: 1rem;
   }
-  #profilePic {
+
+  #profile__pic {
     left: 4vw;
     height: 150px;
     top: -15px;
   }
-  #profileText {
+
+  #profile__text {
     margin-top: 4px;
     left: 6vw;
   }
 
-  #profileSocMed {
+  #profile__soc-med {
     margin-top: 4px;
     gap: 24px;
   }
-  #profileSocMed .fa-brands {
+  #profile__soc-med .fa-brands {
     font-size: 1rem;
   }
-  #infoWrap {
+  #info-wrap {
     padding: 10px;
   }
-  #toolsWrap {
+  #tools-wrap {
     position: relative;
     height: 100px;
   }
-  .tool {
+  .tools__tool {
     font-size: 30px;
     line-height: 30px;
     height: 30px;
@@ -780,14 +789,14 @@ footer {
     gap: 20px;
     padding: 30px 20px;
   }
-  .projectPic {
+  .project__pic {
     max-width: 100%;
   }
-  .projectPicWrap-m {
+  .project__pic-wrap-m {
     height: 570px;
     width: 262px;
   }
-  .projectPic-m {
+  .project__pic-m {
     max-width: 100%;
     max-height: 100%;
   }
@@ -797,7 +806,7 @@ footer {
 }
 
 @media screen and (max-width: 560px) {
-  #landing {
+  #landing-wrap {
     padding-top: 36px;
     height: 100%;
   }
@@ -809,13 +818,13 @@ footer {
     border: var(--box-border-dark);
   }
 
-  #navMenu {
+  #nav-menu {
     padding: 0 30px;
     width: 100vw;
     text-align: center;
     justify-content: space-around;
   }
-  #contactForm {
+  #contact__form {
     width: 95%;
   }
   footer {
