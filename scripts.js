@@ -11,10 +11,12 @@ const contactInTouch = document.getElementById("contactInTouch");
 const scroll = new SmoothScroll('#navMenu a[href*="#"]', { speed: 400 });
 const colorModeChoice = localStorage.getItem("colorMode");
 
+
+
+//awake project on Heroku for faster load
 const pawster = "https://pawster.herokuapp.com/";
 const movieLib = "https://dc-movie-library.herokuapp.com";
 
-//awake project on Heroku for faster load
 async function awake(URL) {
   await fetch(URL, { method: "GET" });
 }
@@ -49,7 +51,7 @@ colorMode.onclick = function () {
   }
 };
 
-// show/hide  label on input in contact form
+// show/hide  label on text input in contact form
 function hideLabel(input, label) {
   input.addEventListener("keyup", () => {
     label.style.visibility = "visible";
